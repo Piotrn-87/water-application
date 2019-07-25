@@ -1,9 +1,11 @@
 @import "_normalize";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext');
 
 
 html {
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 *,
@@ -13,6 +15,72 @@ html {
 }
 
 body {
-  color: $black;
   background: $blue;
+  color: $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Lato;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  line-height: 3.5rem;
+  margin: 0 0 3rem 0;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 17rem;
+  height: 17rem;
+  background: url("../assets/img/water.svg") center center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $black;
+  font-size: 5rem;
+  font-weight: 500;
+  margin: 0 0 3rem 0;
+
+  &__number {
+    display: block;
+    padding: 2rem;
+  }
+}
+
+.button-add {
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  color: $black;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin: 0 0 1.5rem 0;
+  width: 13rem;
+  height: 2.5rem;
+}
+
+.button-remove {
+  border: none;
+  color: $white;
+  background: none;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  font-style: normal;
 }
