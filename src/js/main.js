@@ -16,7 +16,7 @@ const value = document.querySelector(".container__number--js");
 const key = new Date().toISOString().slice(0, 10);
 console.log(key);
 
-if (localStorage.getItem(key)) {
+if (!localStorage.getItem(key)) {
   localStorage.setItem(key, 0)
   value.innerHTML = "0";
 } else {
@@ -26,4 +26,11 @@ if (localStorage.getItem(key)) {
 buttonAdd.addEventListener('click', (e) => {
   localStorage.setItem(key, parseInt(localStorage.getItem(key)) + 1);
   value.innerHTML = localStorage.getItem(key);
+})
+
+buttonRemove.addEventListener('click', (e) => {
+  const currentValue = parseInt(value.innerHTML);
+  if (currentValue > 0) {
+    value.innerHTML = parseInt(value.innerHTML) - 1;
+  }
 })
