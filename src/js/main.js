@@ -1,9 +1,5 @@
 "use strict";
 
-// import {
-//   parse
-// } from "url";
-
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
     navigator.serviceWorker.register('serviceworker.js').then(function (registration) {
@@ -20,14 +16,17 @@ const value = document.querySelector(".glass__number--js");
 const glass = document.querySelector(".glass__value--js");
 const soundsWaterAdd = new Audio("assets/sounds/water.wav");
 const soundsWaterRemove = new Audio("assets/sounds/drain.wav");
+const header = document.querySelector(".header");
 const date = new Date().toISOString().slice(0, 10);
 console.log(date);
 
 if (!localStorage.getItem(date)) {
   localStorage.setItem(date, 0)
   value.innerHTML = "0";
+  glass.classList.add("glass__value--0");
 } else {
   value.innerHTML = localStorage.getItem(date);
+  glass.classList.add(`glass__value--${parseInt(value.innerHTML)}`);
 }
 
 buttonAdd.addEventListener('click', (e) => {
@@ -37,9 +36,13 @@ buttonAdd.addEventListener('click', (e) => {
     localStorage.setItem(date, parseInt(localStorage.getItem(date)) + 1);
     value.innerHTML = localStorage.getItem(date);
     glass.classList.remove(
-      `glass__value--${parseInt(value.innerHTML) - 1}`
+      `glass__value--${currentValueAdd - 1}`
     );
-    glass.classList.add(`glass__value--${parseInt(value.innerHTML)}`);
+    glass.classList.add(`glass__value--${currentValueAdd + 1}`);
+  }
+  if (currentValueAdd >= 8) {
+    console.log("Pelne nawodnienie");
+    header.textContent = "Max hydration";
   }
 })
 
@@ -52,6 +55,10 @@ buttonRemove.addEventListener('click', (e) => {
     glass.classList.remove(
       `glass__value--${parseInt(value.innerHTML) + 1}`
     );
-    glass.classList.add(`glass__value--${parseInt(value.innerHTML)}`);
+    glass.classList.add(`glass__value--${currentValueRemove - 1}`);
+  }
+  if (currentValueRemove <= 9) {
+    header.textContent = "water";
+
   }
 })
