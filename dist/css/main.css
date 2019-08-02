@@ -364,7 +364,7 @@ body {
   margin: 0 0 3rem 0;
   text-transform: uppercase; }
 
-.container {
+.glass {
   width: 17rem;
   height: 17rem;
   background: url("../assets/img/water.svg") center center;
@@ -382,7 +382,7 @@ body {
   font-size: 5rem;
   font-weight: 500;
   margin: 0 0 3rem 0; }
-  .container__number {
+  .glass__number {
     display: block;
     padding: 2rem; }
 
