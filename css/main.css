@@ -365,10 +365,9 @@ body {
   text-transform: uppercase; }
 
 .glass {
-  width: 17rem;
+  position: relative;
+  width: 20rem;
   height: 17rem;
-  background: url("../assets/img/water.svg") center center;
-  background-size: contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -383,8 +382,90 @@ body {
   font-weight: 500;
   margin: 0 0 3rem 0; }
   .glass__number {
+    position: absolute;
     display: block;
     padding: 2rem; }
+  .glass__value--0 {
+    fill: #eceff1;
+    -webkit-clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
+            clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__value--1 {
+    -webkit-clip-path: polygon(6% 91%, 100% 91%, 90% 100%, 6% 100%);
+            clip-path: polygon(6% 91%, 100% 91%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__value--2 {
+    -webkit-clip-path: polygon(6% 81%, 100% 81%, 90% 100%, 6% 100%);
+            clip-path: polygon(6% 81%, 100% 81%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__value--3 {
+    -webkit-clip-path: polygon(6% 71%, 100% 71%, 90% 100%, 6% 100%);
+            clip-path: polygon(6% 71%, 100% 71%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__value--4 {
+    -webkit-clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+            clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__value--5 {
+    -webkit-clip-path: polygon(6% 51%, 100% 51%, 90% 100%, 6% 100%);
+            clip-path: polygon(6% 51%, 100% 51%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__value--6 {
+    -webkit-clip-path: polygon(4% 41%, 100% 41%, 90% 100%, 6% 100%);
+            clip-path: polygon(4% 41%, 100% 41%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__value--7 {
+    -webkit-clip-path: polygon(2% 31%, 100% 31%, 90% 100%, 6% 100%);
+            clip-path: polygon(2% 31%, 100% 31%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__value--8 {
+    -webkit-clip-path: polygon(0% 21%, 100% 21%, 90% 100%, 6% 100%);
+            clip-path: polygon(0% 21%, 100% 21%, 90% 100%, 6% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
+  .glass__value--9 {
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+    -webkit-transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    transition: fill 1s ease-in, -webkit-clip-path 1s ease-in;
+    -o-transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+    transition: fill 1s ease-in, clip-path 1s ease-in, -webkit-clip-path 1s ease-in; }
 
 .button-add {
   border: none;
@@ -397,7 +478,12 @@ body {
   line-height: 1.5rem;
   margin: 0 0 1.5rem 0;
   width: 13rem;
-  height: 2.5rem; }
+  height: 2.5rem;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out; }
+  .button-add:hover {
+    background: #CAEDFF; }
 
 .button-remove {
   border: none;
@@ -406,6 +492,11 @@ body {
   font-size: 1rem;
   line-height: 1rem;
   font-weight: 500;
-  font-style: normal; }
+  font-style: normal;
+  -webkit-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out; }
+  .button-remove:hover {
+    color: coral; }
 
 /*# sourceMappingURL=main.css.map */
