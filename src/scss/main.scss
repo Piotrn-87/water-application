@@ -44,10 +44,18 @@ body {
 }
 
 .glass {
-  width: 17rem;
+  position: relative;
+
+  &__number {
+    position: absolute;
+    display: block;
+    padding: 2rem;
+  }
+
+  width: 20rem;
   height: 17rem;
-  background: url("../assets/img/water.svg") center center;
-  background-size: contain;
+  // background: url("../assets/img/water.svg") center center no-repeat;
+  // background-size: contain;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,9 +64,57 @@ body {
   font-weight: 500;
   margin: 0 0 3rem 0;
 
-  &__number {
-    display: block;
-    padding: 2rem;
+
+
+  &__value--0 {
+    fill: #eceff1;
+    clip-path: polygon(8% 100%, 100% 100%, 90% 100%, 6% 100%);
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+  }
+
+  &__value--1 {
+    clip-path: polygon(6% 91%, 100% 91%, 90% 100%, 6% 100%);
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+  }
+
+  &__value--2 {
+    clip-path: polygon(6% 81%, 100% 81%, 90% 100%, 6% 100%);
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+  }
+
+  &__value--3 {
+    clip-path: polygon(6% 71%, 100% 71%, 90% 100%, 6% 100%);
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+  }
+
+  &__value--4 {
+    clip-path: polygon(6% 61%, 100% 61%, 90% 100%, 6% 100%);
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+  }
+
+  &__value--5 {
+    clip-path: polygon(6% 51%, 100% 51%, 90% 100%, 6% 100%);
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+  }
+
+  &__value--6 {
+    clip-path: polygon(4% 41%, 100% 41%, 90% 100%, 6% 100%);
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+  }
+
+  &__value--7 {
+    clip-path: polygon(2% 31%, 100% 31%, 90% 100%, 6% 100%);
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+  }
+
+  &__value--8 {
+    clip-path: polygon(0% 21%, 100% 21%, 90% 100%, 6% 100%);
+    transition: fill 1s ease-in, clip-path 1s ease-in;
+  }
+
+  &__value--9 {
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+    transition: fill 1s ease-in, clip-path 1s ease-in;
   }
 }
 
@@ -73,6 +129,11 @@ body {
   margin: 0 0 1.5rem 0;
   width: 13rem;
   height: 2.5rem;
+  transition: .3s ease-in-out;
+
+  &:hover {
+    background: $water;
+  }
 }
 
 .button-remove {
@@ -83,4 +144,9 @@ body {
   line-height: 1rem;
   font-weight: 500;
   font-style: normal;
+  transition: .3s ease-in-out;
+
+  &:hover {
+    color: coral;
+  }
 }
