@@ -1,7 +1,7 @@
 ![Homepage screenshot](dist/assets/img/readme.png)
 # water-application supported with local storage
 
-Live: https://piotrn-87.github.io/water-application/
+Try water application: [water-app](https://piotrn-87.github.io/water-application)
 
 to run locally -> 
 
@@ -11,7 +11,8 @@ to run locally ->
 
 `gulp`
 
-Inspired from WTF frontend course.
+
+Inspired from [WTF](https://cotenfrontend.pl) frontend course.
 
 # Technologies and tools
 * JS ES6
