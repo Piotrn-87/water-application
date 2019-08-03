@@ -17,6 +17,7 @@ const glass = document.querySelector(".glass__value--js");
 const soundsWaterAdd = new Audio("assets/sounds/water.wav");
 const soundsWaterRemove = new Audio("assets/sounds/drain.wav");
 const header = document.querySelector(".header");
+const checkbox = document.querySelector(".switch__checkbox--js");
 const date = new Date().toISOString().slice(0, 10);
 console.log(date);
 
@@ -32,7 +33,9 @@ if (!localStorage.getItem(date)) {
 buttonAdd.addEventListener('click', (e) => {
   const currentValueAdd = parseInt(value.innerHTML);
   if (currentValueAdd < 9) {
-    soundsWaterAdd.play();
+    if (checkbox.checked) {
+      soundsWaterAdd.play();
+    }
     localStorage.setItem(date, parseInt(localStorage.getItem(date)) + 1);
     value.innerHTML = localStorage.getItem(date);
     glass.classList.remove(
@@ -49,7 +52,9 @@ buttonAdd.addEventListener('click', (e) => {
 buttonRemove.addEventListener('click', (e) => {
   const currentValueRemove = parseInt(value.innerHTML);
   if (currentValueRemove > 0) {
-    soundsWaterRemove.play();
+    if (checkbox.checked) {
+      soundsWaterRemove.play();
+    }
     localStorage.setItem(date, localStorage.getItem(date) - 1);
     value.innerHTML = localStorage.getItem(date);
     glass.classList.remove(

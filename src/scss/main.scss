@@ -25,32 +25,51 @@ body {
   padding: 1rem;
 }
 
-.onoff {
+.switch {
   position: absolute;
   top: 2%;
   left: 5%;
-  height: 7rem;
+  height: 4rem;
   width: 10rem;
   display: flex;
   justify-content: space-around;
-  // background: red;
+
+  @media (max-width: 40rem) {
+    top: 2%;
+    left: 2%;
+    width: 8rem;
+    height: 3rem;
+
+  }
 }
 
-.switch {
+.switch__text {
+  @media (max-width: 40rem) {
+    font-size: 1rem;
+  }
+}
+
+.switch__label {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
-  top: 15%;
+  top: 30%;
+
+  @media (max-width: 40rem) {
+    width: 30px;
+    height: 17px;
+    left: -10%;
+  }
 }
 
-.switch input {
+.switch__checkbox {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.slider {
+.switch__slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -60,32 +79,47 @@ body {
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 20px;
 }
 
-.slider:before {
+.switch__slider:before {
   position: absolute;
   content: "";
   height: 26px;
   width: 26px;
-  left: 4px;
+  left: 2px;
   bottom: 4px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 50%;
+
+  @media (max-width: 40rem) {
+    width: 13px;
+    height: 13px;
+    left: 4px;
+    bottom: 2px;
+  }
 }
 
-input:checked+.slider {
-  background-color: #2196F3;
+input:checked+.switch__slider {
+  background-color: #50B8FF;
 }
 
-input:focus+.slider {
-  box-shadow: 0 0 1px #2196F3;
+input:focus+.switch__slider {
+  box-shadow: 0 0 1px #50B8FF;
 }
 
-input:checked+.slider:before {
+.switch__checkbox:checked+.switch__slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+
+  @media (max-width: 40rem) {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
 }
 
 .main {
@@ -107,6 +141,7 @@ input:checked+.slider:before {
 
   @media (max-width: 40rem) {
     font-size: 2rem;
+    margin: 1rem 0 2rem 0;
   }
 }
 
