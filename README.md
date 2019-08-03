@@ -1,6 +1,8 @@
 ![Homepage screenshot](dist/assets/img/readme.png)
 # water-application supported with local storage
 
+Live: https://piotrn-87.github.io/water-application/
+
 to run locally -> 
 
 `npm install -g gulp-cli`
